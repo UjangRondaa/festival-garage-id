@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Laporan UTS — Digital Business — Ahmad Rizal Dwi Nugraha</title>
+  <style>
+    @page { size: A4; margin: 2.5cm 2cm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.6;
+      color: #111;
+      max-width: 21cm;
+      margin: 0 auto;
+      padding: 2cm 1.5cm;
+      background: #fff;
+    }
+    h1, h2, h3, h4 { font-family: "Arial", "Helvetica", sans-serif; color: #111; }
+    h1 { font-size: 18pt; text-align: center; margin: 0 0 8pt; letter-spacing: 0.5pt; }
+    h2 { font-size: 14pt; margin: 24pt 0 8pt; border-bottom: 2pt solid #E8490F; padding-bottom: 4pt; }
+    h3 { font-size: 12pt; margin: 16pt 0 6pt; color: #E8490F; }
+    h4 { font-size: 11pt; margin: 12pt 0 4pt; }
+    p { margin: 0 0 8pt; text-align: justify; }
+    ul, ol { margin: 0 0 8pt 24pt; }
+    li { margin-bottom: 4pt; }
+    strong { color: #000; }
+    a { color: #E8490F; text-decoration: underline; word-break: break-all; }
+    code {
+      background: #f4f4f5;
+      padding: 1pt 4pt;
+      border-radius: 3pt;
+      font-family: "Courier New", monospace;
+      font-size: 10pt;
+    }
+    pre {
+      background: #f4f4f5;
+      padding: 8pt 12pt;
+      border-radius: 4pt;
+      border-left: 3pt solid #E8490F;
+      font-family: "Courier New", monospace;
+      font-size: 9.5pt;
+      line-height: 1.4;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 8pt 0 16pt; font-size: 10.5pt; }
+    th, td { border: 1pt solid #888; padding: 6pt 10pt; text-align: left; vertical-align: top; }
+    th { background: #f0f0f2; font-weight: 700; font-family: "Arial", sans-serif; }
+    blockquote {
+      border-left: 3pt solid #E8490F;
+      padding: 4pt 12pt;
+      margin: 8pt 0;
+      background: #fff7f3;
+      font-style: italic;
+      color: #444;
+    }
+    .cover {
+      page-break-after: always;
+      text-align: center;
+      padding: 4cm 1cm 0;
+      min-height: 24cm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cover__title { font-size: 22pt; font-weight: 900; margin-top: 60pt; }
+    .cover__sub { font-size: 14pt; margin-top: 12pt; color: #333; }
+    .cover__brand { margin: 36pt 0; }
+    .cover__brand img { width: 80pt; height: auto; }
+    .cover__info {
+      font-size: 13pt;
+      line-height: 1.9;
+      margin-top: 60pt;
+    }
+    .cover__info p { text-align: center; margin: 0; }
+    .cover__footer { font-size: 12pt; text-align: center; }
+    .badge {
+      display: inline-block;
+      background: #E8490F;
+      color: #fff;
+      padding: 2pt 10pt;
+      border-radius: 999pt;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 1pt;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 140pt 1fr;
+      gap: 4pt 16pt;
+      margin: 8pt 0 16pt;
+    }
+    .meta-grid > div:nth-child(odd) { font-weight: 700; }
+    .screenshot-placeholder {
+      border: 2pt dashed #aaa;
+      background: #fafafa;
+      padding: 20pt;
+      text-align: center;
+      color: #666;
+      font-size: 10pt;
+      margin: 8pt 0;
+      border-radius: 4pt;
+    }
+    @media print {
+      body { padding: 0; }
+      .page-break { page-break-before: always; }
+      a { color: #E8490F; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========================= COVER ========================= -->
+<section class="cover">
+  <div>
+    <p style="font-size: 13pt; margin: 0;"><strong>LAPORAN UJIAN TENGAH SEMESTER (UTS)</strong></p>
+    <p style="font-size: 13pt; margin: 4pt 0 0;">MATA KULIAH <strong>DIGITAL BUSINESS</strong></p>
+    <p style="margin-top: 20pt; font-size: 11pt; color: #666;">Semester Genap 2025/2026</p>
+  </div>
+
+  <div class="cover__brand">
+    <!-- Logo F (SVG inline) -->
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
+      <rect width="100" height="100" rx="22" fill="#E8490F"/>
+      <path d="M 32 22 L 90 22 L 80 36 L 22 36 Z" fill="white"/>
+      <path d="M 22 44 L 68 44 L 58 58 L 12 58 Z" fill="white"/>
+      <path d="M 8 66 L 40 66 L 28 82 L -4 82 Z" fill="white"/>
+    </svg>
+    <p class="cover__title" style="margin-top: 12pt;">FESTIVAL GARAGE ID</p>
+    <p class="cover__sub" style="font-style: italic; color: #666;">Diler Virtual Mobil Langka Forza Horizon 5</p>
+    <p style="font-size: 11pt; color: #888; margin-top: 6pt;">
+      "Dapatkan Mobil Langka Impianmu. Instan. Aman. Terpercaya."
+    </p>
+  </div>
+
+  <div class="cover__info">
+    <p><strong>Disusun oleh:</strong></p>
+    <p>Ahmad Rizal Dwi Nugraha</p>
+    <p>NIM: 23.11.5396</p>
+    <p style="margin-top: 20pt;">Kelompok bersama:</p>
+    <p>Mukti Cahyo Pamungkas (23.11.5435)</p>
+    <p>Raymond Olga Saputra (23.11.5426)</p>
+  </div>
+
+  <div class="cover__footer">
+    <p style="margin: 0;"><strong>PROGRAM STUDI INFORMATIKA</strong></p>
+    <p style="margin: 0;">FAKULTAS ILMU KOMPUTER</p>
+    <p style="margin: 0;">UNIVERSITAS AMIKOM YOGYAKARTA</p>
+    <p style="margin: 6pt 0 0;"><strong>2026</strong></p>
+  </div>
+</section>
+
+<!-- ========================= PENDAHULUAN ========================= -->
+<h2>1. PENDAHULUAN</h2>
+
+<h3>1.1 Identitas Bisnis</h3>
+<div class="meta-grid">
+  <div>Nama Brand</div><div>Festival Garage ID</div>
+  <div>Tagline</div><div><em>"Dapatkan Mobil Langka Impianmu. Instan. Aman. Terpercaya."</em></div>
+  <div>Bidang</div><div>Perdagangan aset digital (virtual goods)</div>
+  <div>Produk</div><div>Mobil langka di dalam game Forza Horizon 5 (rare, ultra-rare, unicorn, Festival Playlist exclusive)</div>
+  <div>Model</div><div>Diler virtual — operasi 100% online via WhatsApp Business + Instagram</div>
+  <div>Lokasi</div><div>Yogyakarta, Indonesia</div>
+</div>
+
+<h3>1.2 Ringkasan Tugas UTS</h3>
+<p>Laporan ini mendokumentasikan pengerjaan UTS Mata Kuliah Digital Business yang terdiri dari <strong>dua bagian utama</strong>:</p>
+<ol>
+  <li><strong>Bagian 1 — Copywriting &amp; Implementasi Landing Page</strong> dalam bentuk <em>wireframe</em> dan <em>mockup</em> (CPMK04, bobot 40%).</li>
+  <li><strong>Bagian 2 — Konfigurasi Domain &amp; Hosting</strong> agar landing page dapat diakses publik (CPMK07, bobot 60%).</li>
+</ol>
+
+<h3>1.3 Unique Value Proposition (UVP)</h3>
+<ul>
+  <li><strong>Hemat Waktu</strong> — Tidak perlu grinding berminggu-minggu. Mobil langka masuk garasi dalam hitungan menit setelah pemesanan.</li>
+  <li><strong>Transaksi Aman &amp; Dipandu</strong> — Setiap transfer dipandu langsung oleh tim menggunakan metode khusus Auction House untuk menghindari bot sniper dan risiko banned.</li>
+  <li><strong>Stok Selalu Update</strong> — Katalog diperbarui setiap minggu mengikuti rotasi event musiman FH5.</li>
+</ul>
+
+<!-- ========================= BAGIAN 1 ========================= -->
+<h2>2. BAGIAN 1 — COPYWRITING &amp; LANDING PAGE <span class="badge">CPMK04 · 40%</span></h2>
+
+<h3>2.1 Konsep Copywriting</h3>
+<p>Copywriting Festival Garage ID dirancang dengan prinsip <strong>jelas, persuasif, dan berorientasi konversi</strong>. Bahasa yang digunakan adalah bahasa kasual khas komunitas gamer Indonesia — bersahabat namun profesional, sesuai dengan profil target audiens (usia 17–35 tahun, casual gamer hingga hardcore collector FH5).</p>
+
+<h4>Headline Utama</h4>
+<blockquote>"Mobil Langka FH5 Langsung Masuk Garasi. Tanpa Grinding."</blockquote>
+<p>Headline ini langsung memukul <em>pain point</em> utama pemain FH5: grinding berjam-jam untuk mendapatkan satu mobil eksklusif. Kata kunci <strong>"Tanpa Grinding"</strong> diberi penekanan visual (warna oranye gradient) sebagai janji utama brand.</p>
+
+<h4>Sub-headline</h4>
+<blockquote>"Festival Garage ID — diler virtual terpercaya untuk mobil unicorn, ultra-rare, &amp; Festival Playlist exclusive. Transfer aman via Auction House, dipandu tim berpengalaman."</blockquote>
+
+<h4>Call to Action (CTA)</h4>
+<ul>
+  <li><strong>CTA Utama:</strong> "Chat WhatsApp Sekarang" → langsung diarahkan ke <code>wa.me</code> dengan pesan template.</li>
+  <li><strong>CTA Sekunder:</strong> "Lihat Katalog" → smooth scroll ke section katalog ready stock.</li>
+  <li><strong>CTA Final:</strong> "Hubungi Admin Sekarang" di section penutup, dengan badge "Admin Online · Respon &lt; 5 Menit".</li>
+</ul>
+
+<h3>2.2 Struktur Landing Page — 6 Section</h3>
+<table>
+  <thead><tr><th width="20%">Section</th><th>Isi &amp; Tujuan</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hero</strong></td><td>Headline besar, sub-copy, 2 CTA, hero visual placeholder/screenshot mobil FH5. Tujuan: kesan pertama kuat &amp; konversi cepat ke WhatsApp.</td></tr>
+    <tr><td><strong>Angka Kepercayaan</strong></td><td>Tiga metrik: 100+ Transaksi Sukses · &lt;5 Menit Respon Admin · 5.0★ Rating Pelanggan. Tujuan: social proof tanpa testimoni foto.</td></tr>
+    <tr><td><strong>Katalog Ready Stock</strong></td><td>Grid 4 mobil ready stock: Porsche 911 GT3 RS (2023), Nissan Z Nismo (2024), Toyota Camry TRD (2023), Toyota GR86 (2022). Tiap kartu: foto, tag rarity (UNICORN/RARE/TUNER), status (READY/LIMITED), harga, tombol "Pesan via WhatsApp" dengan pesan auto-fill nama mobil.</td></tr>
+    <tr><td><strong>Cara Kerja</strong></td><td>Tiga langkah mudah: Pilih Mobil → Bayar → Mobil Masuk Garasi. Tujuan: mengurangi keraguan pembeli baru.</td></tr>
+    <tr><td><strong>FAQ</strong></td><td>Lima pertanyaan utama: keamanan akun, durasi proses, metode pembayaran, jam operasional, pre-order. Tujuan: jawab keberatan sebelum ditanya.</td></tr>
+    <tr><td><strong>CTA Final + Footer</strong></td><td>Banner oranye dengan tombol besar ke WhatsApp + Instagram. Footer: brand, kontak, jam operasional, disclaimer non-afiliasi Microsoft/Playground Games.</td></tr>
+  </tbody>
+</table>
+
+<h3>2.3 Wireframe (Low-Fidelity)</h3>
+<p>Wireframe dibuat di Figma sebagai blueprint struktur dan tata letak — masih low-fidelity tanpa warna atau foto asli, fokus pada layout dan hierarki konten.</p>
+<p><strong>Link Figma Wireframe:</strong> <a href="https://www.figma.com/design/ARNHyOPpTthhU9VZzrZ4ae/">https://www.figma.com/design/ARNHyOPpTthhU9VZzrZ4ae/</a></p>
+<div class="screenshot-placeholder">[ SCREENSHOT WIREFRAME — Print Screen file Figma wireframe lalu insert gambar di sini ]</div>
+
+<h3>2.4 Mockup (High-Fidelity)</h3>
+<p>Mockup adalah versi visual final yang sudah dilengkapi dengan brand color (oranye <code>#E8490F</code> + hitam/abu gelap), tipografi (Inter), foto mobil, dan styling lengkap menyerupai hasil akhir di browser.</p>
+<p><strong>Link Figma Mockup:</strong> <a href="https://www.figma.com/design/RBJYDNfdASvUlmv55uHPKJ/">https://www.figma.com/design/RBJYDNfdASvUlmv55uHPKJ/</a></p>
+<div class="screenshot-placeholder">[ SCREENSHOT MOCKUP — Print Screen file Figma mockup lalu insert gambar di sini ]</div>
+
+<h3>2.5 Implementasi Langsung di Kode</h3>
+<p>Selain wireframe dan mockup, landing page juga sudah diimplementasikan dalam <strong>kode HTML/CSS/JavaScript murni</strong> dan dapat diakses secara publik (lihat Bagian 3). Berikut screenshot landing page yang sudah live:</p>
+<div class="screenshot-placeholder">[ SCREENSHOT LIVE SITE — Print Screen halaman live di browser, masukkan di sini ]</div>
+
+<!-- ========================= BAGIAN 2 ========================= -->
+<div class="page-break"></div>
+<h2>3. BAGIAN 2 — KONFIGURASI DOMAIN &amp; HOSTING <span class="badge">CPMK07 · 60%</span></h2>
+
+<h3>3.1 Strategi Domain &amp; Hosting</h3>
+<p>Berdasarkan diskusi tim dan struktur biaya bisnis yang sudah dikunci (total biaya teknologi: Rp 49.000/bulan untuk Xbox Game Pass saja), kami memilih solusi hosting <strong>GRATIS namun profesional</strong> untuk landing page Festival Garage ID:</p>
+
+<div class="meta-grid">
+  <div>Platform Hosting</div><div><strong>GitHub Pages</strong> — gratis, unlimited bandwidth untuk public repo, HTTPS otomatis, integrasi langsung dengan workflow Git.</div>
+  <div>Domain</div><div><code>USERNAME.github.io/festival-garage-id</code> — subdomain bawaan GitHub Pages, gratis selamanya.</div>
+  <div>Biaya Total</div><div><strong>Rp 0 / bulan</strong></div>
+  <div>SSL/HTTPS</div><div>Otomatis terenkripsi (Let's Encrypt) — sertifikat valid &amp; gratis.</div>
+  <div>Update</div><div>Setiap push ke branch <code>main</code> auto-deploy dalam 1–2 menit.</div>
+</div>
+
+<h3>3.2 Stack Teknologi yang Digunakan</h3>
+<table>
+  <thead><tr><th>Teknologi</th><th>Fungsi</th><th>Biaya</th></tr></thead>
+  <tbody>
+    <tr><td>HTML5</td><td>Markup semantik untuk struktur halaman</td><td>Gratis</td></tr>
+    <tr><td>CSS3 (vanilla)</td><td>Styling responsive, dark theme, animasi</td><td>Gratis</td></tr>
+    <tr><td>JavaScript (vanilla)</td><td>FAQ accordion, smooth scroll, WhatsApp deep link</td><td>Gratis</td></tr>
+    <tr><td>Google Fonts (Inter)</td><td>Font modern untuk branding</td><td>Gratis</td></tr>
+    <tr><td>Git</td><td>Version control source code</td><td>Gratis</td></tr>
+    <tr><td>GitHub</td><td>Repository hosting</td><td>Gratis (public repo)</td></tr>
+    <tr><td>GitHub Pages</td><td>Web hosting + HTTPS</td><td>Gratis</td></tr>
+  </tbody>
+</table>
+
+<h3>3.3 Struktur File Project</h3>
+<pre>festival-garage-id/
+├── index.html                          (~22 KB) — 6 section landing page
+├── style.css                           (~19 KB) — Brand styling + responsive
+├── script.js                           (~4 KB)  — Interactivity
+├── README.md                                    — Dokumentasi project
+├── .gitignore                                   — Git ignore rules
+└── assets/
+    ├── 1-porsche-gt3rs.png             — Foto katalog
+    ├── 2-nissan-z-nismo.png
+    ├── 3-toyota-camry-trd.png
+    └── 4-toyota-gr86.png</pre>
+
+<h3>3.4 Langkah-Langkah Konfigurasi (Step-by-Step)</h3>
+
+<h4>Langkah 1 — Setup Lokal</h4>
+<pre># Buat folder project &amp; inisialisasi Git
+mkdir -p ~/Documents/festival-garage-id
+cd ~/Documents/festival-garage-id
+git init</pre>
+
+<h4>Langkah 2 — Buat File HTML / CSS / JS</h4>
+<p>File <code>index.html</code>, <code>style.css</code>, dan <code>script.js</code> dibuat sesuai struktur 6 section yang dibahas di Bagian 1. Brand color konsisten: oranye <code>#E8490F</code> + dark background.</p>
+
+<h4>Langkah 3 — Commit ke Git</h4>
+<pre>git add .
+git commit -m "Initial commit: Festival Garage ID landing page"
+git branch -M main</pre>
+
+<h4>Langkah 4 — Buat Repository di GitHub</h4>
+<ol>
+  <li>Login ke <a href="https://github.com">github.com</a>.</li>
+  <li>Klik tombol "+" pojok kanan atas → "New repository".</li>
+  <li>Repository name: <code>festival-garage-id</code></li>
+  <li>Visibility: <strong>Public</strong> (wajib agar bisa pakai GitHub Pages gratis).</li>
+  <li>Jangan centang "Add README" (file sudah ada di local).</li>
+  <li>Klik "Create repository".</li>
+</ol>
+
+<h4>Langkah 5 — Push ke GitHub</h4>
+<pre>git remote add origin https://github.com/USERNAME/festival-garage-id.git
+git push -u origin main</pre>
+
+<h4>Langkah 6 — Aktifkan GitHub Pages</h4>
+<ol>
+  <li>Buka repo di GitHub → tab <strong>Settings</strong>.</li>
+  <li>Sidebar kiri → <strong>Pages</strong>.</li>
+  <li>Section "Build and deployment":
+    <ul>
+      <li>Source: <strong>Deploy from a branch</strong></li>
+      <li>Branch: <strong>main</strong> · folder <strong>/ (root)</strong></li>
+    </ul>
+  </li>
+  <li>Klik <strong>Save</strong>.</li>
+  <li>Tunggu 1–2 menit. GitHub akan menampilkan URL live di atas.</li>
+</ol>
+
+<h3>3.5 URL Live (Publicly Accessible)</h3>
+<blockquote style="font-size: 13pt; text-align: center; font-style: normal;">
+  🌐 <strong>https://USERNAME.github.io/festival-garage-id/</strong><br>
+  <small style="font-size: 10pt; color: #666;">(Ganti USERNAME dengan username GitHub Ahmad Rizal setelah deploy)</small>
+</blockquote>
+<p>URL ini dapat diakses dari mana saja, di seluruh dunia, tanpa login. Memenuhi syarat <strong>"Dapat diakses secara publik"</strong> dari soal UTS poin 2.</p>
+
+<h3>3.6 Bukti Akses Publik</h3>
+<div class="screenshot-placeholder">
+  [ SCREENSHOT 1 — Halaman live di browser desktop ]
+</div>
+<div class="screenshot-placeholder">
+  [ SCREENSHOT 2 — Halaman live di browser mobile (responsive view) ]
+</div>
+<div class="screenshot-placeholder">
+  [ SCREENSHOT 3 — GitHub repo Settings &gt; Pages yang menunjukkan deployment success ]
+</div>
+
+<!-- ========================= KESIMPULAN ========================= -->
+<h2>4. KESIMPULAN</h2>
+<p>UTS Mata Kuliah Digital Business untuk project <strong>Festival Garage ID</strong> telah berhasil diselesaikan dengan output:</p>
+<ol>
+  <li><strong>Copywriting lengkap</strong> untuk 6 section landing page — headline, sub-headline, CTA, deskripsi value proposition, FAQ, dan tagline brand.</li>
+  <li><strong>Wireframe (low-fi)</strong> dan <strong>Mockup (hi-fi)</strong> dibuat di Figma sebagai blueprint visual sebelum implementasi kode.</li>
+  <li><strong>Implementasi kode HTML/CSS/JavaScript murni</strong> tanpa framework, responsive untuk desktop &amp; mobile.</li>
+  <li><strong>Hosting publik via GitHub Pages</strong> dengan HTTPS otomatis dan total biaya Rp 0 — sejalan dengan struktur biaya bisnis yang minim cost.</li>
+</ol>
+<p>Landing page ini dapat langsung digunakan sebagai <strong>main funnel marketing</strong> Festival Garage ID — pengunjung dari Instagram bio, TikTok, atau iklan dapat langsung diarahkan ke URL ini, lalu di-convert ke chat WhatsApp dengan satu klik.</p>
+
+<h3>4.1 Pemenuhan CPMK</h3>
+<table>
+  <thead><tr><th>CPMK</th><th>Deskripsi</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td><strong>CPMK04</strong> (40%)</td><td>Menyusun copywriting &amp; mengimplementasikan landing page dalam wireframe/mockup</td><td>✅ Tercapai — wireframe + mockup Figma + kode live</td></tr>
+    <tr><td><strong>CPMK07</strong> (60%)</td><td>Konfigurasi domain hosting agar dapat diakses publik</td><td>✅ Tercapai — deployed di GitHub Pages, HTTPS, public access</td></tr>
+  </tbody>
+</table>
+
+<h3>4.2 Lampiran Link</h3>
+<ul>
+  <li><strong>Live Site:</strong> <a href="https://USERNAME.github.io/festival-garage-id/">https://USERNAME.github.io/festival-garage-id/</a></li>
+  <li><strong>Source Code GitHub:</strong> <a href="https://github.com/USERNAME/festival-garage-id">https://github.com/USERNAME/festival-garage-id</a></li>
+  <li><strong>Wireframe Figma:</strong> <a href="https://www.figma.com/design/ARNHyOPpTthhU9VZzrZ4ae/">https://www.figma.com/design/ARNHyOPpTthhU9VZzrZ4ae/</a></li>
+  <li><strong>Mockup Figma:</strong> <a href="https://www.figma.com/design/RBJYDNfdASvUlmv55uHPKJ/">https://www.figma.com/design/RBJYDNfdASvUlmv55uHPKJ/</a></li>
+</ul>
+
+<p style="margin-top: 32pt; text-align: center; font-size: 11pt; color: #666;">
+  — End of Document —<br>
+  © 2026 Festival Garage ID. Submitted for academic purposes.
+</p>
+
+</body>
+</html>
